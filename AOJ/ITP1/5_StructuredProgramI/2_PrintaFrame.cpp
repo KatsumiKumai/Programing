@@ -6,17 +6,22 @@ int main(){
 
   while(true){
     cin >> H >> W;
-    if(H == 0 && W == 0){
+
+    if(H==0 && W==0){
       return 0;
-    } else {
+    } else{
       for(int i=0; i<H; i++){
         for(int j=0; j<W; j++){
-          cout << "#" ;
+          if(i==0 || i==H-1 || j==0 || j==W-1){
+            cout << "#";
+          }else{
+            cout << ".";
+          }
         }
         cout << endl;
       }
-      cout << endl;
     }
+    cout << endl;
   }
 
 }
