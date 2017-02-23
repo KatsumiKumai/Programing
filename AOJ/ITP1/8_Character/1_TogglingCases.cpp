@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cctype>
+#include <stdio.h>
 using namespace std;
 
 int main(){
@@ -6,9 +8,17 @@ int main(){
 
 	while(true){
 		scanf("%c", &sentence);
+		if(islower(sentence)){
+			sentence = toupper(sentence);
+		}else if(isupper(sentence)){
+			sentence = tolower(sentence);
+		}else{
+			sentence = sentence;
+		}
 
-		cout << sentence << endl;
+		cout << sentence;
 
 		if(sentence == '\n') break;
 	}
+	return 0;
 }
